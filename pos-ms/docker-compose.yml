@@ -1,0 +1,24 @@
+services:
+  database:
+    image: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - C:/docker/volumes/postgres:/var/lib/postgresql/data
+    environment:
+      PGDATA: /var/lib/postgresql/data
+      POSTGRES_DB: pos
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+  backend:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - database
+    environment:
+      ENVIRONMENT: dev
+      DATABASE_HOST: database
+      DATABASE_NAME: pos
+      DATABASE_USERNAME: postgres
+      DATABASE_PASSWORD: password

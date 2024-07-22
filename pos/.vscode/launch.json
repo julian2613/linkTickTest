@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "local web",
+            "request": "launch",
+            "program": "lib/shared/infrastructure/presentation/main/pages/main.dart",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define-from-file=environments/local/local-web.json"
+            ]
+        },
+        {
+            "name": "local android",
+            "request": "launch",
+            "program": "lib/shared/infrastructure/presentation/main/pages/main.dart",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define-from-file=environments/local/local-android.json"
+            ]
+        }
+    ]
+}

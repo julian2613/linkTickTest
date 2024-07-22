@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: ${ENVIRONMENT:local}
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://${DATABASE_HOST}:5432/${DATABASE_NAME}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update

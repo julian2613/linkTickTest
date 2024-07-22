@@ -1,0 +1,12 @@
+{
+    "environment": "local",
+    "service.protocol": "http",
+    "service.host": "10.0.2.2",
+    "service.port": 8080,
+    "service.path": "",
+    "service.route.product": "product",
+    "service.route.category": "category",
+    "service.route.warehouse": "warehouse",
+    "service.route.adjustment": "adjustment",
+    "service.route.inventory": "inventory"
+}
